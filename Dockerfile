@@ -1,5 +1,5 @@
 # Use Eclipse Temurin Java 25 JDK
-FROM eclipse-temurin:25-jdk
+FROM eclipse-temurin:21-jdk
  
 # Set working directory
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/taskmanager-0.0.1-SNAPSHOT.jar app.jar
  
 # Expose the Spring Boot port
-EXPOSE 8081
+EXPOSE 8095
  
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
